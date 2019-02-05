@@ -1,0 +1,6 @@
+
+Zsquid:S2589C"7Remove this expression which always evaluates to "true"(©õéáÿÿÿÿÿ8¯çîÃ‹-
+Rsquid:S1066D"/Merge this if statement with the enclosing one.(‡Î›½øÿÿÿÿ8¯çîÃ‹-
+nsquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(ÚñÝáýÿÿÿÿ8¯çîÃ‹-
+Fsquid:S1148g"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¯çîÃ‹-
+¥squid:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…Ë…‹ûÿÿÿÿ8¯çîÃ‹-

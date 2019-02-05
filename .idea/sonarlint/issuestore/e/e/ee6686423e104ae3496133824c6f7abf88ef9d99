@@ -1,0 +1,6 @@
+
+]squid:S1126"AReplace this if-then-else statement by a single return statement.(‰ÍµØ8œÆ¡¿Š-
+Ksquid:EmptyStatementUsageCheck"Remove this empty statement.(¸Ââ¥8œÆ¡¿Š-
+gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(çãÑÓ8œÆ¡¿Š-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Äş†Ì8œÆ¡¿Š-
+U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(çãÑÓ8œÆ¡¿Š-

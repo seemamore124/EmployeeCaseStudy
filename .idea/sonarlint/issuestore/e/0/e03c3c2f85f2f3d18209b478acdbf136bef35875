@@ -1,0 +1,4 @@
+
+Œ"squid:ClassVariableVisibilityCheck"YMake DIFF_CALLBACK a static final constant or non-public and provide accessors if needed.(‘–¦ý8µ¶ãÀ‹-
+tsquid:S3008"XRename this field "DIFF_CALLBACK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘–¦ý8µ¶ãÀ‹-
+Osquid:S1444"3Make this "public static DIFF_CALLBACK" field final(‘–¦ý8µ¶ãÀ‹-
