@@ -18,6 +18,8 @@ public class TheEmployeeDBAPIClient {
     public static EmployeesAPIInterface getClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+
         // create OkHttpClient and register an interceptor
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
