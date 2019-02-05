@@ -25,7 +25,7 @@ public class TheEmployeeDBAPIClient {
 
         Gson gson = new GsonBuilder()
                 // we remove from the response some wrapper tags from our movies array
-                .registerTypeAdapter(ARRAY_LIST_CLASS_TYPE, new EmployeeJsonDeserializer())
+                .registerTypeAdapter(ARRAY_LIST_CLASS_TYPE, new EmployeesJsonDeserializer())
                 .create();
 
         Retrofit.Builder builder = new Retrofit.Builder()

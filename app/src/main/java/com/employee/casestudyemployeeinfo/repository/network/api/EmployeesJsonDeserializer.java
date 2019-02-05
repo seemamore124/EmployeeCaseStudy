@@ -19,25 +19,25 @@ import java.util.ArrayList;
  * Created by Elad on 6/25/2018.
  */
 
-class EmployeeJsonDeserializer implements JsonDeserializer {
+class EmployeesJsonDeserializer implements JsonDeserializer {
 
-    private static String TAG = EmployeeJsonDeserializer.class.getSimpleName();
+    private static String TAG = EmployeesJsonDeserializer.class.getSimpleName();
 
     @Override
     public Object deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        ArrayList<Employee> movies = null;
+        ArrayList<Employee> employees = null;
         try {
             JsonObject jsonObject = json.getAsJsonObject();
-            JsonArray moviesJsonArray = jsonObject.getAsJsonArray(Constants.MOVIES_ARRAY_DATA_TAG);
-            movies = new ArrayList<>(moviesJsonArray.size());
-            for (int i = 0; i < moviesJsonArray.size(); i++) {
+            JsonArray employeesJsonArray = jsonObject.getAsJsonArray(Constants.MOVIES_ARRAY_DATA_TAG);
+            employees = new ArrayList<>(employeesJsonArray.size());
+            for (int i = 0; i < employeesJsonArray.size(); i++) {
                 // adding the converted wrapper to our container
-                Employee dematerialized = context.deserialize(moviesJsonArray.get(i), Employee.class);
-                movies.add(dematerialized);
+                Employee dematerialized = context.deserialize(employeesJsonArray.get(i), Employee.class);
+                employees.add(dematerialized);
             }
         } catch (JsonParseException e) {
             Log.e(TAG, String.format("Could not deserialize Movie element: %s", json.toString()));
         }
-        return movies;
+        return employees;
     }
 }

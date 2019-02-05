@@ -62,14 +62,7 @@ public class NetEmployeesPageKeyedDataSource extends PageKeyedDataSource<String,
                 if (response.isSuccessful()) {
                     callback.onResult(response.body(), Integer.toString(1), Integer.toString(2));
                     networkState.postValue(NetworkState.LOADED);
-                    Log.i(TAG, "JSON Response " + response+"  employeesObservable "+employeesObservable);
-
-                    if(response != null){
-                        if(employeesObservable != null){
-                         //   response.body().forEach(employeesObservable::onNext);
-
-                        }
-                    }
+                    response.body().forEach(employeesObservable::onNext);
                 } else {
                     Log.e("API CALL", response.message());
                     networkState.postValue(new NetworkState(NetworkState.Status.FAILED, response.message()));
