@@ -23,13 +23,10 @@ public class TheEmployeeDBAPIClient {
         // create OkHttpClient and register an interceptor
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-        Gson gson = new GsonBuilder()
-                // we remove from the response some wrapper tags from our movies array
-                .registerTypeAdapter(ARRAY_LIST_CLASS_TYPE, new EmployeesJsonDeserializer())
-                .create();
+
 
         Retrofit.Builder builder = new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .baseUrl(Employess_BASE_URL);
 

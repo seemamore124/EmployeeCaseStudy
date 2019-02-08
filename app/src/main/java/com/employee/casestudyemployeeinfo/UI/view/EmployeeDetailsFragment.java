@@ -31,7 +31,7 @@ public class EmployeeDetailsFragment extends Fragment {
         FragmentDetailsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false);
         viewModel = ViewModelProviders.of(getActivity()).get(EmployeesDetailsViewModel.class);
         View view = binding.getRoot();
-        viewModel.getEmployee().observe(this, binding::setMovie);
+        viewModel.getEmployee().observe(this, binding::setEmployee);
         return view;
     }
 

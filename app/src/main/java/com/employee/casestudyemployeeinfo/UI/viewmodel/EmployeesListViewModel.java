@@ -19,7 +19,7 @@ public class EmployeesListViewModel extends AndroidViewModel {
         super(application);
         repository = EmployeesRepository.getInstance(application);
     }
-    public LiveData<PagedList<Employee>> getMovies() {
+    public LiveData<PagedList<Employee>> getEmployees() {
         return repository.getEmployees();
     }
 

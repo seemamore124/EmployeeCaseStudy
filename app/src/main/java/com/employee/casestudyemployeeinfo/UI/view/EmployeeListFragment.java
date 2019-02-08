@@ -30,8 +30,8 @@ public class EmployeeListFragment extends Fragment implements ItemClickListener 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_movies, container, false);
-        recyclerView = view.findViewById(R.id.moviesRecyclerView);
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        recyclerView = view.findViewById(R.id.employeesRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -43,7 +43,7 @@ public class EmployeeListFragment extends Fragment implements ItemClickListener 
     private void observersRegisters() {
 
         final EmployeesPageListAdapter pageListAdapter = new EmployeesPageListAdapter(this);
-        viewModel.getMovies().observe(this, pageListAdapter::submitList);
+        viewModel.getEmployees().observe(this, pageListAdapter::submitList);
         viewModel.getNetworkState().observe(this, networkState -> {
             pageListAdapter.setNetworkState(networkState);
         });

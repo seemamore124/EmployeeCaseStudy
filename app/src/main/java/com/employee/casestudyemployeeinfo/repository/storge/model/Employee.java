@@ -23,6 +23,9 @@ public class Employee extends BaseObservable {
     @PrimaryKey()
     @ColumnInfo(name = "id") @SerializedName(value="id") private Integer mId;
     @ColumnInfo(name = "employee_name") @SerializedName(value="employee_name") private String name;
+    @ColumnInfo(name = "employee_salary") @SerializedName(value="employee_salary") private String salary;
+    @ColumnInfo(name = "employee_age") @SerializedName(value="employee_age") private String age;
+    @ColumnInfo(name = "profile_image") @SerializedName(value="profile_image") private String profileImage;
 
 
 
@@ -42,7 +45,6 @@ public class Employee extends BaseObservable {
     public Integer getId() {
         return mId;
     }
-
     public void setId(Integer mId) {
         this.mId = mId;
     }
@@ -54,5 +56,27 @@ public class Employee extends BaseObservable {
     @Bindable
     public String getName() {
         return name;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+    @Bindable
+    public String getSalary() {
+        return salary;
+    }
+    public void setAge(String age) {
+        this.age = age;
+    }
+    @Bindable
+    public String getAge() {
+        return age;
+    }
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
+    @Bindable
+    public String getProfileImage() {
+        return profileImage;
     }
 }

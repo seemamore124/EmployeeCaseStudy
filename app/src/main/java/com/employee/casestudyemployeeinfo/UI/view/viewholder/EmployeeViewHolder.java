@@ -18,15 +18,14 @@ public class EmployeeViewHolder extends RecyclerView.ViewHolder implements View.
 
     private Employee employee;
     private TextView titleTextView;
-    private TextView userRatingTextView;
-    private ImageView thumbnailImageView;
+    private TextView salary;
+    private ImageView profileImageView;
     private ItemClickListener itemClickListener;
 
     public EmployeeViewHolder(View view, ItemClickListener itemClickListener) {
         super(view);
         this.titleTextView = view.findViewById(R.id.title);
-        this.userRatingTextView = view.findViewById(R.id.userrating);
-        this.thumbnailImageView = view.findViewById(R.id.thumbnail);
+       // this.profileImageView = view.findViewById(R.id.profileImageView);
         this.itemClickListener = itemClickListener;
         view.setOnClickListener(this);
 
@@ -35,10 +34,9 @@ public class EmployeeViewHolder extends RecyclerView.ViewHolder implements View.
     public void bindTo(Employee employee) {
         this.employee = employee;
         titleTextView.setText(employee.getName());
-      /*  userRatingTextView.setText(String.format("%1$,.2f", movie.getAge()));
-        if(movie.getProfileImage() != null) {
-            String poster = SMALL_IMAGE_URL_PREFIX + movie.getProfileImage();
-            Picasso.get().load(poster).into(thumbnailImageView);
+      /*  if(employee.getProfileImage() != null) {
+            String profile = SMALL_IMAGE_URL_PREFIX + employee.getProfileImage();
+            Picasso.get().load(profile).into(profileImageView);
         }*/
     }
 

@@ -6,53 +6,133 @@
     <data>
 
         <variable
-            name="movie"
+            name="employee"
             type="com.employee.casestudyemployeeinfo.repository.storge.model.Employee" />
     </data>
 
-    <FrameLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <View
-            android:id="@+id/black_mask"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#66000000"
-            android:visibility="gone" />
-
-        <ScrollView
-            android:id="@+id/main_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingTop="240dp"
-            android:scrollbars="none">
 
 
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/details"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/title"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                   android:layout_centerHorizontal="true"
+
+                    android:textStyle="bold"
                     android:ellipsize="end"
-                    android:gravity="center_vertical"
                     android:maxLines="2"
                     android:textColor="@color/primaryText"
                     android:textSize="28sp"
-                    tools:text="@{movie.name}" />
+                    android:text="Employee Details" />
+
+                <ImageView
+                    android:id="@+id/imgProfileImage"
+                    android:layout_below="@+id/details"
+                    android:layout_width="98dp"
+                    android:layout_height="98dp"
+                    android:src="@drawable/default_image_50"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    />
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/imgProfileImage"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    android:text="Employee Name:" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/imgProfileImage"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toEndOf="@+id/titleTextView"
+                    android:layout_marginStart="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    tools:text="@{employee.name}" />
+
+                <TextView
+                    android:id="@+id/salaryTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/titleTextView"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    android:text="Employee Salary:" />
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/salaryTextView"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    tools:text="@{employee.salary}" />
 
 
+                <TextView
+                    android:id="@+id/ageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/salaryTextView"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    android:text="Employee Age:" />
+
+                <TextView
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/salary"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@+id/ageTextView"
+                    android:layout_marginStart="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp"
+                    tools:text="@{employee.age}" />
 
 
-            </LinearLayout>
+            </RelativeLayout>
 
-        </ScrollView>
-    </FrameLayout>
+
 </layout>

@@ -15,17 +15,17 @@ public class NetEmployeesDataSourceFactory extends DataSource.Factory {
 
     private static final String TAG = NetEmployeesDataSourceFactory.class.getSimpleName();
     private MutableLiveData<NetEmployeesPageKeyedDataSource> networkStatus;
-    private NetEmployeesPageKeyedDataSource moviesPageKeyedDataSource;
+    private NetEmployeesPageKeyedDataSource employeesPageKeyedDataSource;
     public NetEmployeesDataSourceFactory() {
         this.networkStatus = new MutableLiveData<>();
-        moviesPageKeyedDataSource = new NetEmployeesPageKeyedDataSource();
+        employeesPageKeyedDataSource = new NetEmployeesPageKeyedDataSource();
     }
 
 
     @Override
     public DataSource create() {
-        networkStatus.postValue(moviesPageKeyedDataSource);
-        return moviesPageKeyedDataSource;
+        networkStatus.postValue(employeesPageKeyedDataSource);
+        return employeesPageKeyedDataSource;
     }
 
     public MutableLiveData<NetEmployeesPageKeyedDataSource> getNetworkStatus() {
@@ -33,7 +33,7 @@ public class NetEmployeesDataSourceFactory extends DataSource.Factory {
     }
 
     public ReplaySubject<Employee> getEmployees() {
-        return moviesPageKeyedDataSource.getEmployees();
+        return employeesPageKeyedDataSource.getEmployees();
     }
 
 }

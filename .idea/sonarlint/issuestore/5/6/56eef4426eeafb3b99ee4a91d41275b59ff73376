@@ -1,4 +1,4 @@
 
+‘squid:UselessImportCheck"fRemove this unused import 'com.employee.casestudyemployeeinfo.databinding.FragmentDetailsBindingImpl'.(Ä ËĞ8ÀİõÀ‹-
 {squid:S1450"XRemove the "viewModel" field and declare it as a local variable in the relevant methods.(ÀìÏüÿÿÿÿ8ÀİõÀ‹-
 ~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(«Îç„ùÿÿÿÿ8ÀİõÀ‹-
-‘squid:UselessImportCheck"fRemove this unused import 'com.employee.casestudyemployeeinfo.databinding.FragmentDetailsBindingImpl'.(Ä ËĞ8ÀİõÀ‹-

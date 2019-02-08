@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:adjustViewBounds="true">
 
     <android.support.v7.widget.CardView
@@ -10,44 +11,42 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="@dimen/card_margin"
+
+        app:cardBackgroundColor="@color/lightPrimary">
         android:elevation="3dp">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/thumbnail"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/posterImage"
-                android:scaleType="fitXY" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView"
+                android:layout_width= "50dp"
+                android:layout_height= "50dp"
+                android:layout_marginLeft="7.3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/default_image_50"/>
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/thumbnail"
-                android:paddingLeft="@dimen/movie_title_padding"
-                android:paddingRight="@dimen/movie_title_padding"
-                android:paddingTop="@dimen/movie_title_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/profileImageView"
+                android:gravity="bottom"
                 android:textColor="@color/primaryText"
-                android:textSize="@dimen/movie_title" />
+                android:textSize="@dimen/movie_title"
+                android:ellipsize="end"
+                android:singleLine="true" />
 
-            <TextView
-                android:id="@+id/userrating"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/title"
-                android:paddingBottom="@dimen/user_rating_padding_button"
-                android:paddingLeft="@dimen/movie_title_padding"
-                android:paddingRight="@dimen/movie_title_padding"
-                android:textColor="@color/accent"
-                android:textSize="@dimen/user_rating" />
+
+
 
         </RelativeLayout>
 
-    </android.support.v7.widget.CardView>
 
+    </android.support.v7.widget.CardView>
 </LinearLayout>
